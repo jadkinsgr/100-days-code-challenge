@@ -1,8 +1,9 @@
 import os
 
-num = 0 
+num = 11 
 while num < 100:
-    pdir = 'PythonScripts/100-days-code-challenge/Day'
+    pdir = '/Users/joshua.adkins/Github/100-days-code-challenge/'
     num += 1
-    com = pdir+str(num)
+    com = pdir+'Day '+str(num)
     os.mkdir(com)
+    #print(com)
