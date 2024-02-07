@@ -1,49 +1,40 @@
+'''
+This code is a Love Calculator that takes two names as input, combines them, and calculates a "love score" based on the occurrence of specific letters in the combined names. Here's a summary of what the code does:
+
+Asks the user for their name (name1) and their partner's name (name2).
+Combines both names into a single string (combinedNames).
+Converts the combined names to lowercase for consistent comparison (lowerNames).
+Counts the occurrences of specific letters ('t', 'r', 'u', 'e') in the combined names and calculates the sum of these counts (firstDigit).
+Counts the occurrences of specific letters ('l', 'o', 'v', 'e') in the combined names and calculates the sum of these counts (secondDigit).
+Concatenates firstDigit and secondDigit into a single string and converts it to an integer to obtain the total love score (total).
+Prints out a message based on the total love score:
+If the score is less than 10 or greater than 90, it suggests that the two people "go together like coke and mentos."
+If the score is between 40 and 50, it suggests that they are "alright together."
+Otherwise, it simply displays the love score.
+'''
+
 print("Welcome to the Love Calculator!")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 
-name1 = name1.lower()
-name2 = name2.lower()
-n1 = 0
-if name1.count('t') > 0:
-  n1 += name1.count('t')
-if name1.count('r') > 0:
-  n1 += name1.count('r')
-if name1.count('u') > 0:
-  n1 += name1.count('u')
-if name1.count('e') > 0:
-  n1 += name1.count('e')
-if name1.count('l') > 0:
-  n1 += name1.count('l')
-if name1.count('o') > 0:
-  n1 += name1.count('o')
-if name1.count('v') > 0:
-  n1 += name1.count('v')
-if name1.count('e') > 0:
-  n1 += name1.count('e')
+combinedNames = name1 + name2
+lowerNames = combinedNames.lower()
 
+t = lowerNames.count("t")
+r = lowerNames.count("r")
+u = lowerNames.count("u")
+e = lowerNames.count("e")
 
-n2 = 0
-if name2.count('t') > 0:
-  n2 += name2.count('t')
-if name2.count('r') > 0:
-  n2 += name2.count('r')
-if name2.count('u') > 0:
-  n2 += name2.count('u')
-if name2.count('e') > 0:
-  n2 += name2.count('e')
-if name2.count('l') > 0:
-  n2 += name2.count('l')
-if name2.count('o') > 0:
-  n2 += name2.count('o')
-if name2.count('v') > 0:
-  n2 += name2.count('v')
-if name2.count('e') > 0:
-  n2 += name2.count('e')
+firstDigit = t+r+u+e
 
+l = lowerNames.count("l")
+o = lowerNames.count("o")
+v = lowerNames.count("v")
+e = lowerNames.count("e")
 
-total = n1 + n2
+secondDigit = l+o+v+e
 
+total = int(str(firstDigit) + str(secondDigit))
 
 if total < 10 or total > 90:
   print(f"your score is {total}, you go together like coke and mentos.")

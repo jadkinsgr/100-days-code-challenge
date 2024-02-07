@@ -33,7 +33,7 @@ if choice1 == "left":
     if choice3 == "red":
       print("It's a room full of fire. Game Over.")
     elif choice3 == "yellow":
-      choice4 = input('You open the door and before you stands a tall mountain, do you take it all in or do you start the summit?).lower()'
+      choice4 = input('You open the door and before you stands a tall mountain, do you take it all in or do you start the summit?).lower()')
     elif choice3 == "blue":
       print("You enter a room of beasts. Game Over.")
     else:
