@@ -21,9 +21,9 @@ for char in range(1, nr_symbols + 1):
 for char in range(1, nr_numbers + 1):
   password_list += random.choice(numbers)
 
-# print(password_list) # In this, in order
+#print(password_list) # In this, in order
 random.shuffle(password_list)  # in list, shuffle order
-# print(password_list) # show shuffled order
+#print(password_list) # show shuffled order
 
 password = ""
 for char in password_list:
